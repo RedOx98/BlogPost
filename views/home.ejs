@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+  
+    <h1> Home </h1>
+
+    <p> <%= postThis %> </p> 
+
+    <% composer.forEach(function(camposers) { %>
+     
+        <h1>  <%= camposers.title %></h1>
+        <p> 
+            <%= camposers.poster.substring(0, 100) + " ..." %>
+        <a href="/posts/<%= camposers.title %>">Read more</a>
+        </p>
+   <% }); %>
+    
+
+<%- include("partials/footer") -%>
